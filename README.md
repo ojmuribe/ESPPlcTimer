@@ -1,11 +1,16 @@
 # ESPPlcTimer
 Library for ESP32 of Timers and other functions commonly used in PLCs
-/* ESPPlcTimers.h
+
+  ESPPlcTimers.h
+  
   Define timers to use PLC style
+  
   (c)2023 Juan M. Uribe
 
 ************* THESE LIBRARIES USE FREE RTOS  ****************
+
 *************     TO USE ONLY WITH ESP32     ****************
+
 
 *************************************************************
 *************    OPERATING INSTRUCTIONS      ****************
@@ -31,7 +36,9 @@ Library for ESP32 of Timers and other functions commonly used in PLCs
     ......
 
   The update function is linked to a FREE RTOS parallel task.
+
   -------------- COPY THIS BEFORE setup() -----------------
+  
     // ESPPlcTimers updaters
     TaskHandle_t timerHandlerTask;
 
@@ -182,4 +189,4 @@ Example: a push button changes state of an output
     digitalWrite(LED_BUILTIN, t(input, true, aux2));
   };
 
------------------------------------------------------------------*/
+-----------------------------------------------------------------
