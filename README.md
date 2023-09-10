@@ -17,7 +17,7 @@ Library for ESP32 of Timers and other functions commonly used in PLCs
 *************************************************************
 
   1. Declare timers at the begining of the program,
-  before setup() followed the update fucntion.
+  before setup() followed the update function.
   Time is specified in ms.
 
     timerON t1(10000); // On delay timer of 10s
