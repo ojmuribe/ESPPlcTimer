@@ -1,2 +1,2 @@
 # ESPPlcTimer
-Librería para ESP32 de Timers y otras funciones comúnmente usadas en PLCs
+Library for ESP32 of Timers and other functions commonly used in PLCs
