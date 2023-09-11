@@ -31,8 +31,9 @@
     ......
 
   The update function is linked to a FREE RTOS parallel task.
+  
   -------------- COPY THIS BEFORE setup() -----------------
-    // ESPPlcTimers updaters
+       
     TaskHandle_t timerHandlerTask;
 
     void timerHandler(void *pvParameters)
@@ -75,56 +76,59 @@
 
 ### edgeUp //Rising edge detection
 
-  bool edgeUp(bool input, bool &prev);
+    bool edgeUp(bool input, bool &prev);
 
 Returns a boolean value that is true one CPU cycle if the input have chanbe from false to true.
 An auxiliary static bool must to be assigned to prev.
 
 Example:
 
-  static bool aux;
+    static bool aux;
     if (edgeUp(digitalRead(GPIO_NUM_13, prev))){
-      Serial.println("Rising edge detection");
-  }
+        Serial.println("Rising edge detection");
+    }
 
 ---
 
 ### edgeDown //Falling edge detection
 
-  bool edgeDown(bool input, bool &prev);
+    bool edgeDown(bool input, bool &prev);
 
 Returns a boolean value that is true one CPU cycle if the input have changed form true to false.
 An auxiliary static bool must to be assigned to prev.
 
 Example:
-  static bool aux;
-  if (edgeDown(digitalRead(GPIO_NUM_13, prev))){
-    Serial.println("Falling edge detection");
-  }
+
+    static bool aux;
+    if (edgeDown(digitalRead(GPIO_NUM_13, prev))){
+      Serial.println("Falling edge detection");
+    }
 
 ---
 
 ### sqPulse //Symmetrical pulse 
 
-  bool sqPulse(uint32_t interval);
+    bool sqPulse(uint32_t interval);
 
 Returns a boolean value that is true for half of the specified period
 and false for the other half.
 
 Example: blinking at 1Hz
-  digitalWrite(LED_BUILDTIN, sqPulse(1000))
+
+    digitalWrite(LED_BUILDTIN, sqPulse(1000))
 
 ---
 
 ### asyncPulse //Asymmetrical pulse 
 
-  bool asyncPulse(uint32_t tON, uint32_t tOFF);
+    bool asyncPulse(uint32_t tON, uint32_t tOFF);
 
 Returns a boolean value that is true during the TON specified time
 and false during the TOFF specified time.
 
 Example: asymmetrical blinking of 1Hz, led on 300ms
-  digitalWrite(LED_BUILDTIN, sqPulse(300, 700))
+
+    digitalWrite(LED_BUILDTIN, sqPulse(300, 700))
 
 ---
 
