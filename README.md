@@ -133,7 +133,8 @@ Example: asymmetrical blinking of 1Hz, led on 300ms
 ---
 
 ### setBool 
-  void setBool(bool &in);
+
+    void setBool(bool &in);
 
 Set true the boolean value passed at in.
 The in variable must to be global or have to be declared
@@ -142,7 +143,8 @@ static bool if local.
 ---
 
 ### resetBool 
-  void resetBool(bool &in);
+
+    void resetBool(bool &in);
 
 Set false the boolean value passed at in.
 The in variable must to be global or have to be declared
@@ -151,7 +153,8 @@ static bool if local.
 ---
 
 ### Set-Reset flip-flop 
-  bool setReset(bool setIn, bool resetIn, bool &prev);
+
+    bool setReset(bool setIn, bool resetIn, bool &prev);
 
 When the setIn input is true, the output becomes true.
 When the resetIn input is true, the output becomes false.
@@ -161,7 +164,8 @@ An auxiliary static bool must to be assigned to prev.
 ---
 
 ### Reset-Set flip-flop 
-  bool ResetSet(bool setIn, bool resetIn, bool &prev);
+
+    bool ResetSet(bool setIn, bool resetIn, bool &prev);
 
 Works like Set-Reset but here Set have the priority
 over Reset.
@@ -170,7 +174,8 @@ An auxiliary static bool must to be assigned to prev.
 ---
 
 ### j-k flip-flop 
-  bool jk(bool jIn, bool kIn, bool ckIn, bool &prev);
+
+    bool jk(bool jIn, bool kIn, bool ckIn, bool &prev);
 
 When ckIn is false the output is unchanged.
 if ckIn is true, then works like a set-reset flip-flop:
@@ -188,7 +193,8 @@ Example: a push button changes state of an output
 ---
 
 ### t flip-flop 
-  bool t(bool tIn, bool ckIn, bool &prev);
+
+    bool t(bool tIn, bool ckIn, bool &prev);
 
 Works like a j-k flip-flop but with only one input
 assigned to both j and k.
