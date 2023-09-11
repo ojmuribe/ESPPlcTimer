@@ -9,7 +9,7 @@
 
 ---
 ## OPERATING INSTRUCTIONS
----
+
 
   1. Declare timers at the begining of the program,
   before setup() followed the update function.
@@ -46,7 +46,7 @@
         ......... //rest of timers
       }
     }
-  ---------------------------------------------------------------
+  ---
 
   2. Add the timer handler at the begining of setup() (see example):
 
@@ -56,7 +56,7 @@
 
       .......... rest of the setup() statements
     };    
----------------------------------------------------------------
+---
 
   3. Use the timers in loop() (see example):
 
@@ -102,7 +102,9 @@ Example:
     Serial.println("Falling edge detection");
   }
 
-******************** sqPulse //Symmetrical pulse *******************
+---
+
+### sqPulse //Symmetrical pulse 
 
   bool sqPulse(uint32_t interval);
 
@@ -112,7 +114,9 @@ and false for the other half.
 Example: blinking at 1Hz
   digitalWrite(LED_BUILDTIN, sqPulse(1000))
 
-******************** asyncPulse //Asymmetrical pulse *******************
+---
+
+### asyncPulse //Asymmetrical pulse 
 
   bool asyncPulse(uint32_t tON, uint32_t tOFF);
 
@@ -122,21 +126,27 @@ and false during the TOFF specified time.
 Example: asymmetrical blinking of 1Hz, led on 300ms
   digitalWrite(LED_BUILDTIN, sqPulse(300, 700))
 
-******************** setBool *******************
+---
+
+### setBool 
   void setBool(bool &in);
 
 Set true the boolean value passed at in.
 The in variable must to be global or have to be declared
 static bool if local.
 
-******************** resetBool *****************
+---
+
+### resetBool 
   void resetBool(bool &in);
 
 Set false the boolean value passed at in.
 The in variable must to be global or have to be declared
 static bool if local.
 
-******************** Set-Reset flip-flop *****************
+---
+
+### Set-Reset flip-flop 
   bool setReset(bool setIn, bool resetIn, bool &prev);
 
 When the setIn input is true, the output becomes true.
@@ -144,14 +154,18 @@ When the resetIn input is true, the output becomes false.
 Reset have priority over set.
 An auxiliary static bool must to be assigned to prev.
 
-******************** Reset-Set flip-flop *****************
+---
+
+### Reset-Set flip-flop 
   bool ResetSet(bool setIn, bool resetIn, bool &prev);
 
 Works like Set-Reset but here Set have the priority
 over Reset.
 An auxiliary static bool must to be assigned to prev.
 
-******************** j-k flip-flop *****************
+---
+
+### j-k flip-flop 
   bool jk(bool jIn, bool kIn, bool ckIn, bool &prev);
 
 When ckIn is false the output is unchanged.
@@ -167,7 +181,9 @@ Example: a push button changes state of an output
     digitalWrite(LED_BUILTIN, jk(input, input, true, aux2));
   };
 
-******************** t flip-flop *****************
+---
+
+### t flip-flop 
   bool t(bool tIn, bool ckIn, bool &prev);
 
 Works like a j-k flip-flop but with only one input
@@ -185,4 +201,4 @@ Example: a push button changes state of an output
     digitalWrite(LED_BUILTIN, t(input, true, aux2));
   };
 
------------------------------------------------------------------
+---
