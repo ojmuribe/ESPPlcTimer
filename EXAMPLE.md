@@ -88,5 +88,6 @@ This is the diagram.json of the circuit. You can upload to Wokwi:
 
 In the Wokwi editor dont't forget to load the ESPPlcTimer library:
 
+![image](https://github.com/ojmuribe/ESPPlcTimer/assets/88215048/b7ae8c32-2ca6-4478-9b93-a7b07cda499e)
 
 
