@@ -183,12 +183,14 @@ j is set
 k is reset
 If j and k are both false the output is unchanged,
 but if j and k are both true the output changes state.
+
 Example: a push button changes state of an output
-  void loop() {
-    static bool aux, aux2;
-    bool input = edgeUp(digitalRead(GPIO_NUM_12), aux);
-    digitalWrite(LED_BUILTIN, jk(input, input, true, aux2));
-  };
+
+    void loop() {
+      static bool aux, aux2;
+      bool input = edgeUp(digitalRead(GPIO_NUM_12), aux);
+      digitalWrite(LED_BUILTIN, jk(input, input, true, aux2));
+    };
 
 ---
 
@@ -204,11 +206,13 @@ but if t is true the output changes state.
 Holding t true and applying a frequency signal to cK
 we will obtain an output signal of half the frequency.
 (often used as a frecuency divider by 2)
+
 Example: a push button changes state of an output
-  void loop() {
-    static bool aux, aux2;
-    bool input = edgeUp(!digitalRead(GPIO_NUM_12), aux);
-    digitalWrite(LED_BUILTIN, t(input, true, aux2));
-  };
+
+    void loop() {
+      static bool aux, aux2;
+      bool input = edgeUp(!digitalRead(GPIO_NUM_12), aux);
+      digitalWrite(LED_BUILTIN, t(input, true, aux2));
+    };
 
 ---
