@@ -1,6 +1,6 @@
 /* ESPPlcTimers.h
   Define timers to use PLC style
-  (c)2023 Juan M. Uribe
+  V1.0 (c)2023 Juan M. Uribe
 
 ************* THESE LIBRARIES USE FREE RTOS  ****************
 *************     TO USE ONLY WITH ESP32     ****************
