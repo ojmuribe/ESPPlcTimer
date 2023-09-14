@@ -1,3 +1,6 @@
+//  Define timers to use PLC style
+//  V1.0 (c)2023 Juan M. Uribe
+
 #include "ESPPlcTimers.h"
 
 // Parameterless constructor. 10s by default.
