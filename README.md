@@ -8,6 +8,8 @@
 
 **TO USE ONLY WITH ESP32**
 
+New version is available: [EspPlcTimers2](https://github.com/ojmuribe/ESPPlcTimer2)
+
 ---
 ## OPERATING INSTRUCTIONS
 
